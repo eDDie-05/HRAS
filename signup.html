@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignupForm</title>
+    <style>
+        body{
+           display:flex;
+           justify-content:center;
+           align-items:center;
+           background-color:rgba(180,160,160,0.5);
+           font-style:normal;
+        }
+        button{
+            background-color:white;
+            color:blue;
+            font-family:arial narrow;
+            font-size:15px;
+            border:1px solid green;
+            height:25px;
+            width:210px;
+            cursor:pointer;
+        }
+        button:hover
+        {
+            background-color:white;
+            color:grey;
+            border-color:red;
+        }
+        input
+        {
+            font-size:14px;
+            font-family:arial narrow;
+            width:205px;
+            height:25px;
+            border:1px solid green;
+        }
+        input:hover{
+            border-color:red;
+        }
+        input:click{
+            border-color:blue;
+        }
+        form{
+            font-family:arial narrow;
+            margin-top:40px;
+        }
+        input:disabled{
+            cursor:not-allowed;
+        }
+        a:hover{
+            color:orange;
+        }
+        label{
+            color:blue;
+            }
+    </style>
+</head>
+
+<body>
+<form id="Signup-Form">
+    <br>
+    <label>I:Search for personal particulars from NIDA:</label><br>
+    <label id="alert" style="color:red"></label><br>
+    <input type="text" id="NIDA" placeholder="NIDA Number" required>
+    <button type="button" onclick="enableInput()">Search</button><br><br>
+    <label>II:Verify current personal particulars:</label><br><br>
+    <input type="text" id="fullname" placeholder="Full Name" maxlength="50" disabled>
+    <input type="text" id="city" placeholder="Region/City" disabled><br><br>
+    <input type="text" id="district" placeholder="District" disabled>
+    <input type="text" id="township" placeholder="Township" disabled><br><br>
+    <input type="text" id="street" placeholder="Street" disabled>
+    <input type="text" id="house" placeholder="House No." disabled><br><br>
+    <input type="email" id="email" placeholder="Email" disabled>
+    <input type="text" id="phone" placeholder="Phone Number" disabled><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit">Submit</button><br><br><br>
+    <label>III:Create user login account:</label><br><br>
+    <input type="text" id="user" placeholder="Username" disabled>
+    <input type="password" id="password1" placeholder="Password" disabled><br><br>
+    <input type="text" placeholder="OTP" disabled> <button type="button">Create</button>
+    <div>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Do you have an account?</label>
+        <a href="LoginForm.html" id="Show-Login">Login</a>
+        <a href="HomePage.html" id="Show-Homepage">Home</a>
+    </div>
+</form>
+<script>
+    function enableInput(){
+        const inputNIDA = document.getElementById('NIDA');
+
+        const inputFullname = document.getElementById('fullname');
+        const inputCity = document.getElementById('city');
+        const inputDistrict = document.getElementById('district');
+        const inputTownship = document.getElementById('township');
+        const inputStreet = document.getElementById('street');
+        const inputHouse = document.getElementById('house');
+        const inputEmail = document.getElementById('email');
+        const inputPhone = document.getElementById('phone');
+        const alertNIDA = document.getElementById('alert');
+
+        if(inputNIDA.value.trim() !== '')
+        {
+          inputFullname.disabled = false;
+          inputCity.disabled = false;
+          inputDistrict.disabled = false;
+          inputTownship.disabled = false;
+          inputStreet.disabled = false;
+          inputHouse.disabled = false;
+          inputEmail.disabled = false;
+          inputPhone.disabled = false;
+          alertNIDA.textContent = '';
+        }
+         else{
+            inputFullname.disabled = true;
+            alertNIDA.textContent = 'NIDA number is required';
+         }
+    }
+</script>
+</body>
+</html>
