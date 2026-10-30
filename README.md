@@ -1,211 +1,57 @@
 # Hospital Registration and Appointment System (HRAS)
 
-The **Hospital Registration and Appointment System (HRAS)** is a software system designed to simplify patient registration and appointment management in hospitals and healthcare facilities.
+HRAS is an **HTML/CSS front-end prototype** exploring a hospital portal for patient registration and appointment-related services. The repository currently contains standalone webpage files.
 
-The system helps manage patient information, doctor information, appointments, and basic hospital registration activities in an organized and efficient way.
+## Prototype pages
 
-## Features
+- `homepage.html` — introductory portal page
+- `welcome.html` — styled welcome page with example service categories
+- `signup.html` — registration-form interface with a small client-side interaction
 
-* Patient registration
-* Patient information management
-* Doctor registration
-* Doctor information management
-* Appointment booking
-* Appointment scheduling
-* Appointment cancellation
-* Search patient records
-* View appointment records
-* Update patient information
-* Delete records
-* Simple user-friendly interface
-* Organized record management
+## Current functionality
 
-## Main Modules
+- Displays introductory hospital-portal content.
+- Presents example service categories such as appointments and patient registration.
+- Shows a signup form layout.
+- The signup page enables additional form fields after a NIDA number is entered.
 
-### Patient Management
+## Important limitations
 
-Allows hospital staff to:
+This repository is currently a front-end prototype, not a production hospital information system.
 
-* Register new patients
-* View patient information
-* Search for patients
-* Update patient records
-* Delete patient records
+- The signup interaction only enables fields; it does **not** verify a NIDA number or retrieve official identity information.
+- There is no backend, database, authentication service, or secure patient-record storage in the current files.
+- Appointment booking, payments, emergency services, and medical records are presented as concepts and are not implemented as working services.
+- Some navigation links refer to page filenames that are not present in the repository and need to be connected to the actual pages.
 
-### Doctor Management
+Do not enter real patient, identity, or medical information into this prototype.
 
-Allows authorized users to:
+## Run locally
 
-* Register doctors
-* View doctor information
-* Manage doctor details
-* Search for available doctors
+1. Clone the repository:
 
-### Appointment Management
+   ```bash
+   git clone https://github.com/eDDie-05/HRAS.git
+   cd HRAS
+   ```
 
-The appointment module allows users to:
+2. Open `homepage.html` or `welcome.html` in a modern web browser.
 
-* Book appointments
-* Select a doctor
-* Select an appointment date
-* Select an appointment time
-* View scheduled appointments
-* Cancel appointments
-* Update appointments
+No package installation or build step is required for the current static pages.
 
-## Example Patient Record
+## Planned improvements
 
-```text
-Patient ID     : P001
-Name           : John Doe
-Age            : 25
-Gender         : Male
-Phone          : +255 XXX XXX XXX
-Department     : General Medicine
-```
+- Correct and test all page navigation.
+- Add responsive layouts and accessible form labels.
+- Design a backend API and database before implementing real registration.
+- Add server-side validation and secure authentication.
+- Add appointment conflict checks and role-based access controls.
+- Add automated tests before treating any workflow as production-ready.
 
-## Example Appointment
+## Contributing
 
-```text
-Appointment ID : A001
-Patient        : John Doe
-Doctor         : Dr. Smith
-Department     : General Medicine
-Date           : 2026-09-21
-Time           : 10:00 AM
-Status         : Scheduled
-```
-
-## Technologies
-
-Depending on the implementation, HRAS can be developed using:
-
-* **Programming Language:** C / Python / Java / JavaScript
-* **Database:** MySQL / PostgreSQL / SQLite
-* **Interface:** Command Line or Graphical User Interface
-* **Database Connectivity:** Appropriate database driver/API
-
-## Project Structure
-
-```text
-HRAS/
-│
-├── src/
-│   ├── main.[extension]
-│   ├── patient.[extension]
-│   ├── doctor.[extension]
-│   └── appointment.[extension]
-│
-├── database/
-│   └── database.sql
-│
-├── assets/
-│
-└── README.md
-```
-
-## System Workflow
-
-```text
-Start
-  ↓
-User Login
-  ↓
-Patient Registration
-  ↓
-Patient Information Stored
-  ↓
-Select Department
-  ↓
-Select Doctor
-  ↓
-Choose Date & Time
-  ↓
-Confirm Appointment
-  ↓
-Appointment Stored
-  ↓
-View / Update / Cancel
-  ↓
-End
-```
-
-## User Roles
-
-The system can support different users:
-
-### Administrator
-
-* Manage system users
-* Manage doctors
-* Manage patients
-* Manage appointments
-* View system records
-
-### Receptionist
-
-* Register patients
-* Book appointments
-* Update patient information
-* View appointments
-
-### Doctor
-
-* View assigned appointments
-* View relevant patient information
-* Update appointment status
-
-## Learning Objectives
-
-This project demonstrates:
-
-* User input and validation
-* Data structures
-* Functions and modular programming
-* Database management
-* CRUD operations
-* Searching and sorting
-* Record management
-* Appointment scheduling
-* User authentication
-* Basic system design
-
-## Future Improvements
-
-* Online patient registration
-* SMS appointment reminders
-* Email notifications
-* Doctor availability management
-* Electronic medical records
-* Payment management
-* Prescription management
-* Patient portal
-* Mobile application
-* Role-based access control
-* Appointment conflict detection
-* Reports and analytics
-
-## Installation
-
-Clone or download the project:
-
-```bash
-git clone <your-repository-url>
-cd HRAS
-```
-
-Follow the project-specific setup instructions for the selected programming language and database.
-
-## Purpose
-
-HRAS is designed as an **educational and practical software project** demonstrating how technology can be used to organize hospital registration and appointment processes.
-
-## eDDie
-
-**Hospital Registration and Appointment System (HRAS)**
-
-Developed for educational and software development purposes.
+Open an issue to discuss a proposed improvement before submitting a pull request. Never include real patient data, identity numbers, or credentials in issues or test examples.
 
 ## License
 
-This project is intended for educational purposes.
+No open-source license is currently specified. All rights remain with the respective content owner unless a license is added.
